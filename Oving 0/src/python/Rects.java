@@ -26,6 +26,7 @@ public class Rects {
 			System.out.println("Rect 2: " + rectangle2String(r2x1,r2y1,r2x2,r2y2));
 			System.out.print(" > ");
 			String token = scanner.nextLine();
+			scanner.close();
 			if (token.equals("overlaps?")){
 				System.out.println(rectanglesOverlap());
 			}else if(token.equals("exit")){
