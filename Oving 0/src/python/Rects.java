@@ -16,7 +16,14 @@ public class Rects {
 	boolean rectanglesOverlap(){
 		return (intervalsOverlap(r1x1,r1x2,r2x1,r2x2) && intervalsOverlap(r1y1,r1y2,r2y1,r2y2));
 	}
-	
+	/**
+	 * Converts the rectangle to a string with formatting
+	 * @param x1 First x coordinate
+	 * @param y1 First y coordinate
+	 * @param x2 Second x coordinate
+	 * @param y2 Second y coordinate
+	 * @return the string to be displayed
+	 */
 	String rectangle2String(int x1, int y1, int x2, int y2){
 		return "(" + x1 + "," + y1 + ")" + "," + "(" + x2 + "," + y2 + ")";
 	}
