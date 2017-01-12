@@ -10,7 +10,9 @@ public class Rects {
 	boolean intervalsOverlap(int n1,int n2,int m1,int m2){
 		return !(n1>m2 || n2 < m1);
 	}
-	
+	/**
+	Checks if two variables overlap, uses the class variables. 
+	*/
 	boolean rectanglesOverlap(){
 		return (intervalsOverlap(r1x1,r1x2,r2x1,r2x2) && intervalsOverlap(r1y1,r1y2,r2y1,r2y2));
 	}
