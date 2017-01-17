@@ -21,4 +21,7 @@ public class Account {
 	void setInterestRate(double interestRate){
 		this.interestRate = interestRate;
 	}
+	public String toString(){
+		return "Balance: " + balance + " Interest rate: " + interestRate;
+	}
 }
