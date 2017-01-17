@@ -12,7 +12,7 @@ public class StopWatch {
 	}
 	
 	boolean isStarted(){
-		return running;
+		return runTime!=-1;
 	}
 	
 	boolean isStopped(){
@@ -54,6 +54,7 @@ public class StopWatch {
 	void stop(){
 		running = false;
 		lastLapTime = currentLapTime;
+		currentLapTime = 0;
 	}
 	
 	public static void main(String[] args) {
