@@ -55,7 +55,7 @@ public class Vehicle {
 			this.fuelType = fuelType;
 			this.registrationNumber = registrationNumber;
 		}else{
-			throw new IllegalArgumentException("Wrong registration number compared to fueltype");
+			throw new IllegalArgumentException("Please enter a valid registration number");
 		}
 	}
 	public char getFuelType(){
@@ -68,13 +68,13 @@ public class Vehicle {
 		if(legalRegistration(vehicleType,fuelType,s)==true){
 			this.registrationNumber = s;
 		}else{
-			throw new IllegalArgumentException("Wrong registration number compared to fueltype");
+			throw new IllegalArgumentException("Please enter a valid registration number");
 		}
 	}
 	public char getVehicleType(){
 		return vehicleType;
 	}
 	public static void main(String[] args) {
-		Vehicle vehicle = new Vehicle('M', 'H', "HY1234");
+		Vehicle vehicle = new Vehicle('M', 'E', "HY1234");
 	}
 }
