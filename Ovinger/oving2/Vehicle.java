@@ -7,7 +7,13 @@ public class Vehicle {
 	
 	private boolean legalRegistration(char vehicleType,char fuelType, String registrationNumber){
 		boolean legal = true;
-		if(registrationNumber.substring(0,2).matches("[0-9]+")||registrationNumber.substring(0,2).matches("[a-z]+")){
+		if(!(vehicleType=='M' || vehicleType=='C')){
+			legal = false;
+		}
+		if(!(fuelType=='H' || fuelType=='E'|| fuelType=='D'|| fuelType=='G')){
+			legal = false;
+		}
+		if(!(registrationNumber.substring(0,2).matches("[A-Z]+"))){
 			legal = false;
 		}
 		if(Character.isDigit(registrationNumber.charAt(2))==false){
@@ -19,11 +25,23 @@ public class Vehicle {
 			legal = false;
 		}
 		if(fuelType == 'E'){
-			if((registrationNumber.startsWith("EL")||registrationNumber.startsWith("EK"))==false){
+			if(!(registrationNumber.startsWith("EL")||registrationNumber.startsWith("EK"))){
 				legal = false;
 			}
 		}else if(fuelType == 'H'){
 			if(registrationNumber.startsWith("HY")==false){
+				legal = false;
+			}else if(vehicleType=='M'){
+				legal = false;
+			}
+		}
+		if(registrationNumber.startsWith("EL")||registrationNumber.startsWith("EK")){
+			if(fuelType!='E'){
+				legal = false;
+			}
+		}
+		if(registrationNumber.startsWith("HY")){
+			if(fuelType!='H'){
 				legal = false;
 			}
 		}
