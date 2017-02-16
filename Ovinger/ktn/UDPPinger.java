@@ -39,6 +39,7 @@ public class UDPPinger {
 			}
 			pTime++;
 		}
+		clientSocket.close();
 		}
 	
 }
