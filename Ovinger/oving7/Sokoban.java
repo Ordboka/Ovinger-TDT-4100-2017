@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Sokoban {
+public class Sokoban implements SaveGameInterface{
 	
 	Stack<String> moves, undoes;
 	int playerX, playerY;
